@@ -1,6 +1,5 @@
 <template>
   <Header></Header>
-
   <MainWrapper></MainWrapper>
 </template>
 

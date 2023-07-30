@@ -11,5 +11,7 @@ module.exports = defineConfig({
       }
     }
   },
-  publicPath: '/artgallery/'
+  publicPath: process.env.NODE_ENV === 'production'
+      ? '/artgallery/'
+      : '/'
 })
