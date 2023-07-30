@@ -1,0 +1,48 @@
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+
+  &.btn-favorite {
+    width: 49px;
+    height: 49px;
+    border-radius: 8px;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .image {
+      width: 24px;
+    }
+
+    &:hover {
+      background: #FFF200;
+    }
+
+    &.disabled {
+      background: #FFF200;
+    }
+  }
+
+  &.btn-download {
+    background: #FFF200;
+    font-size: 20px;
+    color: #000;
+    border-radius: 8px;
+    height: 49px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+
+    .image {
+      width: 26px;
+      margin-right: 16px;
+    }
+
+    &:hover {
+      background: #fff;
+    }
+  }
+}
