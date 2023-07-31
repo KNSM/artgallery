@@ -24,6 +24,15 @@
     &.disabled {
       background: #FFF200;
     }
+
+    @media screen and (max-width: $bpMobile) {
+      width: 41px;
+      height: 41px;
+
+      .image {
+        width: 20px;
+      }
+    }
   }
 
   &.btn-download {
@@ -35,6 +44,7 @@
     padding: 0 22px;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
 
     .image {
       width: 26px;
@@ -43,6 +53,17 @@
 
     &:hover {
       background: #fff;
+    }
+
+    @media screen and (max-width: $bpMobile) {
+      font-size: 0;
+      padding: 0;
+      width: 41px;
+      height: 41px;
+
+      .image {
+        margin-right: 0;
+      }
     }
   }
 }

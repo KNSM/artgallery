@@ -2,10 +2,15 @@
   background: url('@/assets/img/search-bg.png') center center no-repeat;
   background-size: cover;
   padding: 92px 0 106px;
+
+  @media screen and (max-width: $bpDesktop) {
+    padding: calc(80px + (92 - 80) * ((100vw - 320px) / (1440 - 320))) 0 calc(80px + (106 - 80) * ((100vw - 320px) / (1440 - 320)));
+  }
 }
 
 .input-search-wrapper {
   width: 866px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -15,11 +20,11 @@
   height: 70px;
   padding: 0 66px 0 20px;
   font-size: 20px;
-}
 
-.input-search:focus {
-  border: none;
-  outline: none;
+  &:focus {
+    border: none;
+    outline: none;
+  }
 }
 
 .button-search {
@@ -34,15 +39,18 @@
   border: none;
   cursor: pointer;
   transition: .2s;
-}
 
-.button-search:hover {
-  transform: translateY(-50%) scale(1.1);
+  &:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
 }
-
 
 .section-content {
   padding: 114px 0;
+
+  @media screen and (max-width: $bpDesktop) {
+    padding: calc(50px + (114 - 50) * ((100vw - 320px) / (1440 - 320))) 0 calc(50px + (114 - 50) * ((100vw - 320px) / (1440 - 320)));
+  }
 }
 
 .images {
@@ -51,6 +59,10 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px -30px;
+
+    @media screen and (max-width: $bpMobile) {
+      margin: 0 -10px -20px;
+    }
   }
 
   &__item {
@@ -70,6 +82,15 @@
         transform: scale(1.1);
       }
     }
+
+    @media screen and (max-width: $bpMobile) {
+      width: calc(50% - 20px);
+      margin: 0 10px 20px;
+    }
+
+    @media screen and (max-width: $bpPhone) {
+      width: calc(100% - 20px);
+    }
   }
 }
 
@@ -81,6 +102,7 @@
   .image-detail-bg {
     position: absolute;
     z-index: 0;
+    top: 0;
     bottom: 210px;
     left: 50%;
     transform: translateX(-50%);
@@ -97,14 +119,22 @@
 
     &__wrapper {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      margin: 0 -20px -40px;
+      margin: 0 -20px;
     }
 
-
     &__item {
-      margin: 0 20px 40px;
+      margin: 0 20px;
+    }
+
+    &__content {
+      margin-top: 40px;
+      border-radius: 8px;
+      overflow: hidden;
+
+      @media screen and (max-width: $bpDesktop) {
+        margin-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));;
+      }
     }
   }
 
@@ -128,6 +158,10 @@
       .image {
         width: 100%;
       }
+
+      @media screen and (max-width: $bpDesktop) {
+        width: calc(35px + (55 - 35) * ((100vw - 320px) / (1440 - 320)));
+      }
     }
 
     &__content {
@@ -140,12 +174,24 @@
         font-size: 30px;
         line-height: 1.1;
       }
+
+      @media screen and (max-width: $bpDesktop) {
+        .text {
+          font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1440 - 320)));
+        }
+      }
     }
 
     &__nickname {
       .text {
         font-size: 18px;
         line-height: 1.1;
+      }
+
+      @media screen and (max-width: $bpDesktop) {
+        .text {
+          font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1440 - 320)));
+        }
       }
     }
   }
@@ -167,6 +213,10 @@
 .section-favorite {
   padding: 94px 0 160px;
 
+  @media screen and (max-width: $bpDesktop) {
+    padding: calc(40px + (94 - 50) * ((100vw - 320px) / (1440 - 320))) 0 calc(60px + (160 - 60) * ((100vw - 320px) / (1440 - 320)));
+  }
+
   .section__title {
     text-align: center;
     margin-bottom: 100px;
@@ -175,6 +225,13 @@
       font-weight: 700;
       font-size: 72px;
       line-height: 1.2;
+    }
+
+    @media screen and (max-width: $bpDesktop) {
+      margin-bottom: calc(56px + (100 - 56) * ((100vw - 320px) / (1440 - 320)));
+      .text {
+        font-size: calc(36px + (72 - 36) * ((100vw - 320px) / (1440 - 320)));
+      }
     }
   }
 }

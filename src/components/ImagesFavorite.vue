@@ -4,22 +4,17 @@
       <div class="section__title">
         <h1 class="text">Избранное</h1>
       </div>
-    </div>
-
-    <section class="section section-content" id="section-content">
-      <div class="container">
-        <div class="images">
-          <div class="images__wrapper">
-            <ImageFavoriteItem
-                v-for="image in favoriteImages"
-                :key="image.id"
-                :imagesData="image"
-                @imageClick="imageClick"
-            />
-          </div>
+      <div class="images">
+        <div class="images__wrapper">
+          <ImageFavoriteItem
+              v-for="image in favoriteImages"
+              :key="image.id"
+              :imagesData="image"
+              @imageClick="imageClick"
+          />
         </div>
       </div>
-    </section>
+    </div>
   </section>
 </template>
 

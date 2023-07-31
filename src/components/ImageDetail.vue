@@ -41,10 +41,9 @@
               </a>
             </div>
           </div>
-
-          <div class="image-detail__item image-content">
+        </div>
+        <div class="image-detail__content">
             <img :src="image.urls.raw" alt="" class="image">
-          </div>
         </div>
       </div>
     </div>
